@@ -5,10 +5,9 @@ namespace Infrastructure.Entities;
 
 public class AdministrativeUnit : BaseEntity
 {
-    public string Name { get; set; } = string.Empty;
+    public required string Name { get; set; }
 
-    [JsonConverter(typeof(JsonStringEnumConverter))]
-    public AdministrativeUnitType Type { get; set; }
+    public required AdministrativeUnitType Type { get; set; }
 
-    public List<Strategy> Strategies { get; set; } = new List<Strategy>();
+    public List<Strategy> Strategies { get; set; } = new();
 }
