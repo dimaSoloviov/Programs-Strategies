@@ -16,6 +16,7 @@ builder.Services.AddScoped<IStrategyService, StrategyService>();
 builder.Services.AddScoped<IStrategicGoalService, StrategicGoalService>();
 builder.Services.AddScoped<IOperationalGoalService, OperationalGoalService>();
 builder.Services.AddScoped<IProgramTaskService, ProgramTaskService>();
+builder.Services.AddScoped<IParseService, ParseService>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

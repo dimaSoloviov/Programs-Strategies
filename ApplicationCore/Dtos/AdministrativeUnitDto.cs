@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 using Shared;
 
 namespace ApplicationCore.Dtos;
@@ -10,6 +11,7 @@ public class AdministrativeUnitDto : BaseDto
     public required string Name { get; set; }
 
     [Required(ErrorMessage = "Administrative unit type is required")]
+    [JsonConverter(typeof(JsonStringEnumConverter))]
     public required AdministrativeUnitType Type { get; set; }
 
     public List<StrategyDto>? Strategies { get; set; }
